@@ -1,0 +1,16 @@
+<p>
+  <strong>Commenter:</strong>
+  <%= comment.commenter %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= comment.body %>
+</p>
+
+<ul>
+  <li><%= link_to "Edit", edit_article_comment_path(@article, comment) ,class: "btn btn-secondary" %></li>
+  <li><%= link_to "Destroy", article_comment_path(@article, comment),
+  method: :delete,
+  data: { confirm: "Are you sure?" } , class: "btn btn-danger" %></li>
+</ul>
